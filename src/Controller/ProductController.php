@@ -8,9 +8,11 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class ProductController extends AbstractController
 {
-    #[Route('/product', name: 'product_details')]
-    public function details(): Response
+    #[Route('/product/{id}', name: 'product_details')]
+    public function productDetails(Product $product): Response
     {
-         return $this->render('product/product_details.html.twig');
-    }
+    return $this->render('pages/product_details.html.twig', [
+        'product' => $product
+    ]);
+    }   
 }
