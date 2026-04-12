@@ -11,8 +11,8 @@ final class ProductController extends AbstractController
     #[Route('/product/{id}', name: 'product_details')]
     public function productDetails(Product $product): Response
     {
-    return $this->render('pages/product_details.html.twig', [
-        'product' => $product
-    ]);
-    }   
+        return $this->render('pages/product_details.html.twig', [
+            'product' => $product,
+        ]);
+    }
 }
