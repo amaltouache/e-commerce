@@ -8,9 +8,9 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class ProfileController extends AbstractController
 {
-#[Route('/profile', name: 'profile')]
-public function products():Response
-{
-    return $this->render('profile/profile.html.twig');
-}
+    #[Route('/profile', name: 'profile')]
+    public function products(): Response
+    {
+        return $this->render('profile/profile.html.twig');
+    }
 }
